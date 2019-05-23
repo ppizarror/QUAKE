@@ -1,6 +1,5 @@
 ## Ejemplos
 
-|  |  |
 |:---:|:---:|
 | ![QUAKE](https://ppizarror.com/resources/images/quake/quake1.png)  | ![QUAKE](https://ppizarror.com/resources/images/quake/quake2.png) |
 | ![QUAKE](https://ppizarror.com/resources/images/quake/quake3.png)  | ![QUAKE](https://ppizarror.com/resources/images/quake/quake4.png) |
