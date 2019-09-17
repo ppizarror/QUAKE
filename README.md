@@ -1,7 +1,5 @@
 <h1 align="center">
-  <a href="https://github.ppizarror.com/QUAKE/" title="QUAKE">
-    <img alt="QUAKE" src="https://res.ppizarror.com/other/matlab.png" width="200px" height="200px" />
-  </a>
+  <img alt="QUAKE" src="https://res.ppizarror.com/other/matlab.png" width="200px" height="200px" />
   <br /><br />
   QUAKE</h1>
 <p align="center">Propagación de ondas en suelos multicapa</p>
