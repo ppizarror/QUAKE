@@ -2,10 +2,21 @@
 % 3 capas sobre semiespacio (roca flexible)
 
 %% Testeo multicapa 4 capas y semiespacio (roca)
-G = [210000, 1750000, 4300000, 23000000]; % Modulo de rigidez (kN/ms2)
-rho = [16, 20, 23, 26.5]; % Densidad kN/m3
-D = [0.02, 0.02, 0.01, 0]; % Amortiguamiento (%)
-H = [9, 18, 26]; % Altura de cada estrato (m)
+tipo_suelo = 1;
+
+if tipo_suelo == 1
+    G = [210000, 1750000, 4300000, 23000000]; % Modulo de rigidez (kN/ms2)
+    rho = [16, 20, 23, 26.5]; % Densidad kN/m3
+    D = [0.02, 0.02, 0.01, 0]; % Amortiguamiento (%)
+    H = [9, 18, 26]; % Altura de cada estrato (m)
+elseif tipo_suelo == 2
+    G = [1750000, 210000, 4300000, 23000000]; % Modulo de rigidez (kN/ms2)
+    rho = [20, 16, 23, 26.5]; % Densidad kN/m3
+    D = [0.02, 0.02, 0.01, 0]; % Amortiguamiento (%)
+    H = [18, 9, 26]; % Altura de cada estrato (m)
+else
+    error('Suelo desconocido');
+end
 
 % Calcula la velocidad
 Vs = calc_vs(rho, G);
