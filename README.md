@@ -16,7 +16,7 @@
 
 ## Autor
 
-[Pablo Pizarro R.](https://ppizarror.com) | 2019
+[Pablo Pizarro R.](https://ppizarror.com) | 2019 - 2020
 
 ## Licencia
 
