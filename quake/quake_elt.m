@@ -1,5 +1,6 @@
 function quake_elt(Vs, H, ab, T, dh, dt, plot_normalize, plot_pause, plot_cp, plot_maxp, mult_umax, disp_legend, show_max)
-% QUAKE_ELT Genera un grafico de u(z,t) en funcion del tiempo, sistema elastico, un solo estrato.
+% QUAKE_ELT: Genera un grafico de u(z,t) en funcion del tiempo, sistema
+% elastico, un solo estrato.
 %
 % Parametros:
 %   Vs              Velocidad onda de corte
@@ -111,8 +112,6 @@ for i = 1:length(t)
     
     % Si el usuario cierra el plot termina de graficar
     if ~ishandle(plt)
-        delete(plt);
-        close; % Cierra el grafico
         return;
     end
     

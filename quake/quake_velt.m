@@ -1,10 +1,11 @@
 function quake_velt(rho, Vs, D, H, E1, T, dh, dt, plot_normalize, plot_pause, plot_cp, plot_maxp, mult_umax, disp_legend, show_max)
-% QUAKE_VELT Genera un grafico de u(z,t) en funcion del tiempo, sistema multicapas viscoelastico.
+% QUAKE_VELT: Genera un grafico de u(z,t) en funcion del tiempo, sistema
+% multicapas viscoelastico.
 %
 % Parametros:
 %   rho             Vector densidad de cada capa, (n)
 %   Vs              Vector velocidad onda de corte cada capa, (n)
-%   D               Vector de razon de amortiguamiento (1/4pi), (n)
+%   D               Vector de razon de amortiguamiento, (n)
 %   H               Vector de altura cada capa, sin considerar semiespacio (n-1)
 %   E1              Primer valor de Ej, Fj
 %   T               Periodo de la onda
@@ -113,8 +114,6 @@ for i = 1:length(t)
     
     % Si el usuario cierra el plot termina de graficar
     if ~ishandle(plt)
-        delete(plt);
-        close; % Cierra el grafico
         return;
     end
     

@@ -1,5 +1,6 @@
 function u = u_elt(Vs, H, ab, T)
-% U_ELT Retorna una funcion que permite obtener el desplazamiento t en una profundidad zj de un medio elastico de una sola capa.
+% U_ELT: Retorna una funcion que permite obtener el desplazamiento t en una
+% profundidad zj de un medio elastico de una sola capa.
 %
 %   u = u_elt(Vs, H, ab, T)
 %   u(z,t) => u

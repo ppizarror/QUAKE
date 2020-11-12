@@ -1,5 +1,6 @@
 function fa = fa_elt(Vs, H)
-% FA_ELT Retorna la funcion del factor de amplificacion en funcion de omega para el caso elastico de una sola capa.
+% FA_ELT: Retorna la funcion del factor de amplificacion en funcion de omega
+% para el caso elastico de una sola capa.
 %
 %   fa := fa_elt(Vs, H)
 %   fa(w)

@@ -1,5 +1,6 @@
 function u = u_velt(rho, Vs, D, H, E1, T)
-% U_VELT Retorna una funcion que permite obtener el desplazamiento t en una profundidad zj de un medio visco-elastico compuesto por varias capas 1..j.
+% U_VELT: Retorna una funcion que permite obtener el desplazamiento t en
+% una profundidad zj de un medio visco-elastico compuesto por varias capas 1..j.
 %
 %   u = u_velt([rho1,rho2..], [Vs1,Vs2..], [D1,D2..], [H1,H2..], E1, T)
 %   u(z,t) => u
@@ -84,8 +85,8 @@ u = @(z, t) u_zt_nc_velt(z, t, n, Hacum, E, F, k, w);
 end
 
 function u = u_zt_nc_velt(z, t, n, Hacum, E, F, k, w)
-% U_ZT_NC Funcion local que calcula el desplazamiento u(z,t) en un sistema
-% de capas conocido, E,F corresponden a los factores calculados por
+% U_ZT_NC_VELT: Funcion local que calcula el desplazamiento u(z,t) en un
+% sisitema de capas conocido, E,F corresponden a los factores calculados por
 % u_multc, n numero de capas.
 %
 % Parametros
