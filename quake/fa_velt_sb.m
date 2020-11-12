@@ -5,7 +5,7 @@ function ft = fa_velt_sb(rho, Vs, D, H)
 % Parametros:
 %   rho     Vector densidad de cada capa, (n)
 %   Vs      Vector velocidad onda de corte cada capa, (n)
-%   D       Vector de razon de amortiguamiento (1/4pi), (n)
+%   D       Vector de razon de amortiguamiento, (n)
 %   H       Vector de altura cada capa, sin considerar semiespacio (n-1)
 
 %% Obtiene el numero de capas y verifica compatibilidad de datos
