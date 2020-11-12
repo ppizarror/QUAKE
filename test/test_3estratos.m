@@ -38,4 +38,4 @@ dt = 0.002; % Discretizacion en el tiempo
 quake_velt(rho, Vs, D, H, 1, T, dh, dt);
 
 %% Borra las variables
-clear rho Vs D H E1 T dh dt ft_sb ft_sa ft_ab G;
+clear rho Vs D H E1 T dh dt ft_sb ft_sa ft_ab G tipo_suelo;
