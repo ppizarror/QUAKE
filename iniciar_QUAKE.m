@@ -8,7 +8,7 @@
 %|                         Universidad de Chile                         |
 %|______________________________________________________________________|
 
-MCURV_ver = 'v1.2';
+MCURV_ver = 'v1.21';
 
 % Agrega las carpetas de la plataforma QUAKE al PATH
 addpath('quake');
