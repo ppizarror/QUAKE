@@ -1,9 +1,6 @@
 %% TEST_9ESTRATOS
 % 9 capas sobre semiespacio (roca), fuerte contraste de impedancias
 
-% Genera las curvas FTsb (Funcion de transferencia superficie-roca basal) y
-% FTsa (Roca-basal y Afloramiento rocoso)
-
 %% Crea sistema de capas
 Vs = [180, 200, 250, 200, 720, 250, 250, 720, 1800]; % Velocidad onda de corte (m/s)
 rho = [18, 15, 20, 16, 21, 17, 17, 19, 25]; % Densidad kN/m3
@@ -15,7 +12,6 @@ ft_sb = ft_velt_sb(rho, Vs, D, H); % FT superficie/roca-basal
 ft_sa = ft_velt_sa(rho, Vs, D, H); % FT superficie/afloramiento
 ft_ab = ft_velt_ab(rho, Vs, D, H); % FT afloramiento/roca-basal
 
-%% Grafica los factores
 plot_ft(ft_sb, 0, 30, 'title', 'Funcion Transferencia | Superficie / Roca Basal', ...
     'use_freq', true, 'ylabel', '$FT_{sb}(\omega = 2 \pi f)$');
 plot_ft(ft_sa, 0, 30, 'title', 'Funcion Transferencia | Superficie / Afloramiento Rocoso', ...

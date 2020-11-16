@@ -19,13 +19,12 @@ fprintf('FT: %f\n', ft(2*pi/T));
 % Calcula omega resonante
 fprintf('Periodo resonante: %f\n', 4*H/Vs);
 
-dh = 0.2;
-dt = 0.005;
-
 %% Crea el grafico de la funcion de transferencia
 plot_ft(ft, 0, 45, 'title', 'Funcion de Transferencia');
 
-%% Genera el grafico
+%% Genera el grafico quake
+dh = 0.2;
+dt = 0.005;
 quake_elt(Vs, H, ab, T, dh, dt);
 
 %% Borra las variables

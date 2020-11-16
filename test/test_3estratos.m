@@ -1,7 +1,7 @@
 %% TEST_3ESTRATOS
 % 3 capas sobre semiespacio (roca flexible)
 
-%% Testeo multicapa 3 capas y semiespacio (roca)
+%% Crea sistema de capas
 tipo_suelo = 1;
 
 if tipo_suelo == 1
@@ -26,7 +26,6 @@ ft_sb = ft_velt_sb(rho, Vs, D, H); % FT superficie/roca-basal
 ft_sa = ft_velt_sa(rho, Vs, D, H); % FT superficie/afloramiento
 ft_ab = ft_velt_ab(rho, Vs, D, H); % FT afloramiento/roca-basal
 
-%% Grafica los factores
 plot_ft(ft_sb, 0, 30, 'title', 'Funcion Transferencia | Superficie / Roca Basal', ...
     'use_freq', true, 'ylabel', '$FT_{sb}(\omega = 2 \pi f)$');
 plot_ft(ft_sa, 0, 30, 'title', 'Funcion Transferencia | Superficie / Afloramiento Rocoso', ...

@@ -10,14 +10,13 @@ ab = 10; % Amplitud basal (m)
 T = 4 * H / Vs;
 fprintf('Periodo resonante: %f\n', T);
 
-dh = 0.2;
-dt = 0.01;
-
 %% Crea el grafico de la funcion de transferencia
 ft = ft_elt(Vs, H);
 plot_ft(ft, 0, 50, 'title', 'Funcion de Transferencia');
 
-%% Genera el grafico (en resonancia)
+%% Genera el grafico (en resonancia) quake
+dh = 0.2;
+dt = 0.01;
 quake_elt(Vs, H, ab, T, dh, dt);
 
 %% Borra las variables
