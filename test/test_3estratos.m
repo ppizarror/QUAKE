@@ -1,7 +1,7 @@
 %% TEST_3ESTRATOS
 % 3 capas sobre semiespacio (roca flexible)
 
-%% Testeo multicapa 4 capas y semiespacio (roca)
+%% Testeo multicapa 3 capas y semiespacio (roca)
 tipo_suelo = 1;
 
 if tipo_suelo == 1
@@ -22,14 +22,17 @@ end
 Vs = calc_vs(rho, G);
 
 %% Genera las funciones de transferencia
-ft_sb = fa_velt_sb(rho, Vs, D, H); % FT superficie/roca-basal
-ft_sa = fa_velt_sa(rho, Vs, D, H); % FT superficie/afloramiento
-ft_ab = fa_velt_ab(rho, Vs, D, H); % FT afloramiento/roca-basal
+ft_sb = ft_velt_sb(rho, Vs, D, H); % FT superficie/roca-basal
+ft_sa = ft_velt_sa(rho, Vs, D, H); % FT superficie/afloramiento
+ft_ab = ft_velt_ab(rho, Vs, D, H); % FT afloramiento/roca-basal
 
 %% Grafica los factores
-plot_fa(ft_sb, 0, 30, 'Funcion Transferencia Superficie / Roca Basal', 'FTsb', false);
-plot_fa(ft_sa, 0, 30, 'Funcion Transferencia Superficie / Afloramiento Rocoso', 'FTsa', false);
-plot_fa(ft_ab, 0, 30, 'Funcion Transferencia Afloramiento Rocoso / Roca Basal', 'FTab', false);
+plot_ft(ft_sb, 0, 30, 'title', 'Funcion Transferencia | Superficie / Roca Basal', ...
+    'use_freq', true, 'ylabel', '$FT_{sb}(\omega = 2 \pi f)$');
+plot_ft(ft_sa, 0, 30, 'title', 'Funcion Transferencia | Superficie / Afloramiento Rocoso', ...
+    'use_freq', true, 'ylabel', '$FT_{sa}(\omega = 2 \pi f)$');
+plot_ft(ft_ab, 0, 30, 'title', 'Funcion Transferencia | Afloramiento Rocoso / Roca Basal', ...
+    'use_freq', true, 'ylabel', '$FT_{ab}(\omega = 2 \pi f)$');
 
 %% Genera el grafico
 T = 0.3; % Periodo de la onda
@@ -38,4 +41,4 @@ dt = 0.002; % Discretizacion en el tiempo
 quake_velt(rho, Vs, D, H, 1, T, dh, dt);
 
 %% Borra las variables
-clear rho Vs D H E1 T dh dt ft_sb ft_sa ft_ab G tipo_suelo;
+clear rho Vs D H E1 T dh dt ft_sb ft_sa ft_ab G tipo_suelo ans;

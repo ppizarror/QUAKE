@@ -13,12 +13,12 @@ fprintf('Periodo resonante: %f\n', T);
 dh = 0.2;
 dt = 0.01;
 
-%% Crea el grafico del factor de amplificacion
-fa = fa_elt(Vs, H);
-plot_fa(fa, 0, 50, -100, 100, 'Factor Amplificacion');
+%% Crea el grafico de la funcion de transferencia
+ft = ft_elt(Vs, H);
+plot_ft(ft, 0, 50, 'title', 'Funcion de Transferencia');
 
-%% Genera el grafico
+%% Genera el grafico (en resonancia)
 quake_elt(Vs, H, ab, T, dh, dt);
 
 %% Borra las variables
-clear T H Vs ab dh dt;
+clear T H Vs ab dh dt ft ans;
